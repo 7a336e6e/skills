@@ -3,18 +3,18 @@ name: Designing Schemas
 description: Design normalized PostgreSQL schemas from tech specs, with proper constraints, naming conventions, and standard columns.
 ---
 
-# Goal
+## Goal
 
 Translate data entities from a tech spec into well-structured PostgreSQL tables that follow normalization rules, enforce data integrity through constraints, and use consistent naming conventions.
 
-# When to Use
+## When to Use
 
 - Starting a new feature that requires new database tables
 - Refactoring an existing schema to fix normalization issues
 - Reviewing a proposed data model before writing migrations
 - Adding relationships between existing entities
 
-# Instructions
+## Instructions
 
 ## 1. Identify Entities and Relationships
 
@@ -78,7 +78,7 @@ CREATE INDEX ix_task_assignments_task_id ON task_assignments (task_id);
 
 Refer to the naming conventions reference for all naming decisions. Use snake_case throughout. Table names are plural, column names are singular.
 
-# Constraints
+## Constraints
 
 ### ✅ Do
 - Use NOT NULL by default on every column; allow NULL only with explicit justification
@@ -99,11 +99,11 @@ Refer to the naming conventions reference for all naming decisions. Use snake_ca
 - Add surrogate keys to pure join tables unless they need independent identity
 
 
-# Output Format
+## Output Format
 
 Produce a SQL file containing all `CREATE TABLE`, `CREATE INDEX`, and `ALTER TABLE` statements. Group related tables together. Include comments explaining non-obvious design decisions. End with a summary listing all tables and their relationships.
 
-# Dependencies
+## Dependencies
 
 - [Task Tracking](../../shared/task-tracking/SKILL.md) — update task status as schema work progresses
 - [Naming Conventions](references/naming-conventions.md) — rules for table, column, index, and constraint names

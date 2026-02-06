@@ -3,11 +3,11 @@ name: Optimizing Performance
 description: Diagnose and fix PostgreSQL performance issues using EXPLAIN ANALYZE, indexes, connection pooling, and query optimization.
 ---
 
-# Goal
+## Goal
 
 Identify and resolve PostgreSQL query performance bottlenecks through systematic analysis with EXPLAIN ANALYZE, strategic index creation, connection pooling configuration, and query rewriting.
 
-# When to Use
+## When to Use
 
 - A query takes longer than acceptable thresholds (typically >100ms for OLTP)
 - Application logs show slow query warnings
@@ -15,7 +15,7 @@ Identify and resolve PostgreSQL query performance bottlenecks through systematic
 - Adding a new feature that will query large tables
 - Reviewing query patterns before a production deployment
 
-# Instructions
+## Instructions
 
 ## 1. Diagnose with EXPLAIN ANALYZE
 
@@ -133,7 +133,7 @@ ORDER BY total_exec_time DESC
 LIMIT 20;
 ```
 
-# Constraints
+## Constraints
 
 ### ✅ Do
 - Run EXPLAIN ANALYZE before and after every optimization to measure impact
@@ -151,11 +151,11 @@ LIMIT 20;
 - Cache query results at the application layer without understanding the underlying issue first
 
 
-# Output Format
+## Output Format
 
 Produce a performance analysis report containing: the original query, the EXPLAIN ANALYZE output before optimization, the changes made (new indexes, rewritten query, configuration), and the EXPLAIN ANALYZE output after optimization with measured improvement.
 
-# Dependencies
+## Dependencies
 
 - [Writing Queries](../writing-queries/SKILL.md) — the queries and models being optimized
 - [Index Strategy Reference](references/index-strategy.md) — decision tree for choosing the right index type

@@ -3,11 +3,11 @@ name: Securing Data
 description: Implement database security through encryption, Row-Level Security, connection hardening, backups, and audit logging.
 ---
 
-# Goal
+## Goal
 
 Protect data at rest and in transit by encrypting sensitive columns, isolating tenant data with Row-Level Security, enforcing secure connections, maintaining reliable backups, and logging all data changes for audit.
 
-# When to Use
+## When to Use
 
 - Storing personally identifiable information (PII) such as email, phone, SSN
 - Building a multi-tenant application that shares database tables across tenants
@@ -15,7 +15,7 @@ Protect data at rest and in transit by encrypting sensitive columns, isolating t
 - Defining a backup and disaster recovery strategy
 - Adding audit trails for compliance requirements
 
-# Instructions
+## Instructions
 
 ## 1. Encrypt Sensitive Columns
 
@@ -168,7 +168,7 @@ CREATE TRIGGER audit_users
     FOR EACH ROW EXECUTE FUNCTION audit_trigger_func();
 ```
 
-# Constraints
+## Constraints
 
 ### ✅ Do
 - Encrypt all PII columns at the application level before storage
@@ -189,11 +189,11 @@ CREATE TRIGGER audit_users
 - Disable SSL for convenience, even in development environments
 
 
-# Output Format
+## Output Format
 
 Produce SQL scripts for RLS policies, role definitions, and audit triggers. Produce Python modules for encryption utilities. Include configuration snippets for connection security. Document the backup schedule and restoration procedure.
 
-# Dependencies
+## Dependencies
 
 - [Designing Schemas](../designing-schemas/SKILL.md) — schema must be defined before security policies are applied
 - [Environment Config](../../shared/environment-config/SKILL.md) — encryption keys and database credentials are managed through environment configuration

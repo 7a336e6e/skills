@@ -3,18 +3,18 @@ name: Writing Queries
 description: Write SQLAlchemy ORM models and queries following repository patterns, with guidance on when to use raw SQL.
 ---
 
-# Goal
+## Goal
 
 Implement data access using SQLAlchemy ORM for standard CRUD operations and raw SQL for complex reporting queries. Follow the repository pattern to keep database logic isolated from business logic.
 
-# When to Use
+## When to Use
 
 - Defining SQLAlchemy models for new or existing tables
 - Writing CRUD operations for a feature
 - Building complex queries with joins, aggregations, or subqueries
 - Deciding between ORM and raw SQL for a specific use case
 
-# Instructions
+## Instructions
 
 ## 1. Define the SQLAlchemy Model
 
@@ -154,7 +154,7 @@ rows = result.mappings().all()
 | Bulk updates/deletes   | Raw SQL   | ORM loads every row; raw SQL is faster    |
 | Reporting queries      | Raw SQL   | Multiple joins, CTEs, window functions    |
 
-# Constraints
+## Constraints
 
 ### ✅ Do
 - Use parameterized queries for all user-supplied values
@@ -172,11 +172,11 @@ rows = result.mappings().all()
 - Use session.execute() without parameterized bindings for dynamic values
 
 
-# Output Format
+## Output Format
 
 Produce a Python module containing the SQLAlchemy model class, a repository class with CRUD methods, and a session management utility. Include docstrings on all public methods. Add inline comments for non-obvious query logic.
 
-# Dependencies
+## Dependencies
 
 - [Designing Schemas](../designing-schemas/SKILL.md) — defines the table structures that models must match
 - [Writing Migrations](../writing-migrations/SKILL.md) — migrations must exist before models can be used

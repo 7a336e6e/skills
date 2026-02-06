@@ -24,15 +24,45 @@ This is the canonical reference for all agents in the system. Use it when decidi
 
 ---
 
-## Architect
+## Planner
 
-**Role:** Designs system structure — data models, API contracts, component hierarchies, and technical decisions.
+**Role:** Facilitates brainstorming, defines project roadmap, and sets high-level strategy.
 
 | Skill | Path | Description |
 |-------|------|-------------|
-| Designing Systems | `architect/designing-systems/SKILL.md` | High-level architecture and system design |
-| Defining API Contracts | `architect/defining-api-contracts/SKILL.md` | REST/GraphQL endpoint specs, request/response shapes |
-| Data Modeling | `architect/data-modeling/SKILL.md` | Entity relationships, schema design, normalization |
+| Project Planning | `planner/project-planning/SKILL.md` | Create project roadmaps and milestones |
+| Brainstorming | `planner/brainstorming/SKILL.md` | Facilitate ideation sessions and capture ideas |
+
+**Key strengths:** Strategic thinking, stakeholder alignment, timeline estimation, scope definition.
+**Technologies:** Markdown roadmaps, Gantt charts, milestone tracking.
+**Assign when:** Starting a new project, defining scope, or planning sprints.
+
+---
+
+## Product Manager
+
+**Role:** Translates high-level goals into concrete user value and testable stories.
+
+| Skill | Path | Description |
+|-------|------|-------------|
+| Defining User Stories | `product/defining-user-stories/SKILL.md` | Write user stories with acceptance criteria |
+| Managing Backlog | `product/managing-backlog/SKILL.md` | Prioritize and groom the product backlog |
+
+**Key strengths:** User empathy, value prioritization, acceptance criteria, stakeholder communication.
+**Technologies:** User story format, backlog management, prioritization frameworks.
+**Assign when:** Defining features, writing acceptance criteria, or prioritizing work.
+
+---
+
+## Architect
+
+**Role:** Designs system structure — analyzes requirements, creates architecture, and generates technical specs.
+
+| Skill | Path | Description |
+|-------|------|-------------|
+| Analyzing Requirements | `architect/analyzing-requirements/SKILL.md` | Parse requirements into structured specs |
+| Designing Architecture | `architect/designing-architecture/SKILL.md` | Define system components and boundaries |
+| Generating Technical Spec | `architect/generating-technical-spec/SKILL.md` | Create implementation tasks from architecture |
 
 **Key strengths:** Big-picture thinking, cross-cutting technical decisions, establishing contracts that other agents build against.
 **Technologies:** System diagrams, OpenAPI/Swagger, ERD notation, ADRs (Architecture Decision Records).
@@ -40,83 +70,127 @@ This is the canonical reference for all agents in the system. Use it when decidi
 
 ---
 
-## Frontend
+## Designer
 
-**Role:** Builds user-facing interfaces — pages, components, state management, and client-side logic.
+**Role:** Defines the visual design system and produces production-ready CSS.
 
 | Skill | Path | Description |
 |-------|------|-------------|
+| Brand Identity | `designer/brand-identity/SKILL.md` | Define brand values, personality, and visual language |
+| Designing UI System | `designer/designing-ui-system/SKILL.md` | Create design tokens, color palette, typography |
+| Creating Page Layouts | `designer/creating-page-layouts/SKILL.md` | Define page structure, grids, visual hierarchy |
+| Ensuring Accessibility | `designer/ensuring-accessibility/SKILL.md` | WCAG 2.2 AA compliance and testing |
+| Generating CSS | `designer/generating-css/SKILL.md` | Produce Tailwind config and CSS from design tokens |
+
+**Key strengths:** Visual consistency, responsive design, accessibility compliance, design system thinking.
+**Technologies:** Design tokens, Tailwind CSS, CSS custom properties, WCAG guidelines.
+**Assign when:** Work involves visual appearance, layout decisions, or design system updates.
+
+---
+
+## Frontend Engineer
+
+**Role:** Builds the React + TypeScript frontend with Vite tooling.
+
+| Skill | Path | Description |
+|-------|------|-------------|
+| Scaffolding Frontend | `frontend/scaffolding-frontend/SKILL.md` | Vite + React + TypeScript project setup |
 | Building Components | `frontend/building-components/SKILL.md` | Create reusable UI components |
-| Managing State | `frontend/managing-state/SKILL.md` | Client-side state, data fetching, caching |
-| Implementing Pages | `frontend/implementing-pages/SKILL.md` | Full page composition, routing, layout |
+| Managing State | `frontend/managing-state/SKILL.md` | Zustand, TanStack Query, React Context |
+| Bundling Frontend | `frontend/bundling-frontend/SKILL.md` | Vite config and build optimization |
+| Testing Frontend | `frontend/testing-frontend/SKILL.md` | Vitest, Testing Library, Playwright |
+| Integrating API | `frontend/integrating-api/SKILL.md` | Typed API client and error handling |
 
 **Key strengths:** Component architecture, responsive UI, client-side performance, accessibility.
-**Technologies:** React, TypeScript, Next.js, Tailwind CSS, Zustand/Redux, React Query.
+**Technologies:** React, TypeScript, Vite, Tailwind CSS, Zustand, TanStack Query.
 **Assign when:** Work involves anything the user sees or interacts with in the browser.
 
 ---
 
-## Backend
+## Backend Engineer
 
-**Role:** Implements server-side logic — API endpoints, business rules, middleware, and service integrations.
+**Role:** Builds the Flask API backend with RESTful routes and middleware.
 
 | Skill | Path | Description |
 |-------|------|-------------|
-| Building API Endpoints | `backend/building-api-endpoints/SKILL.md` | REST endpoint implementation with validation |
-| Implementing Business Logic | `backend/implementing-business-logic/SKILL.md` | Domain rules, service layer, data transformations |
-| Writing Middleware | `backend/writing-middleware/SKILL.md` | Request/response pipeline, logging, error handling |
+| Scaffolding Flask | `backend/scaffolding-flask/SKILL.md` | App factory pattern and blueprint setup |
+| Building API Routes | `backend/building-api-routes/SKILL.md` | RESTful routes with validation |
+| Managing Flask Middleware | `backend/managing-flask-middleware/SKILL.md` | CORS, rate limiting, security headers |
+| Handling Errors | `backend/handling-errors/SKILL.md` | Centralized error handling |
+| Testing Flask | `backend/testing-flask/SKILL.md` | pytest, fixtures, test client |
+| Deploying Flask | `backend/deploying-flask/SKILL.md` | Gunicorn, Nginx, Docker |
 
 **Key strengths:** API implementation, business rule enforcement, input validation, error handling.
-**Technologies:** Node.js, Express/Fastify, TypeScript, Zod, Prisma, REST conventions.
+**Technologies:** Flask, Python, Gunicorn, Docker, pytest.
 **Assign when:** Work involves server-side logic, API implementation, or anything between the frontend and the database.
 
 ---
 
-## Storage
+## Database Engineer
 
-**Role:** Manages data persistence — database schemas, migrations, queries, and data integrity.
+**Role:** Designs and maintains the PostgreSQL database layer.
 
 | Skill | Path | Description |
 |-------|------|-------------|
-| Writing Migrations | `database/writing-migrations/SKILL.md` | Schema changes, table creation, index management |
-| Building Queries | `database/building-queries/SKILL.md` | Efficient reads and writes, query optimization |
-| Managing Seeds | `database/managing-seeds/SKILL.md` | Test data, seed scripts, data fixtures |
+| Designing Schemas | `database/designing-schemas/SKILL.md` | Schema design and normalization |
+| Writing Migrations | `database/writing-migrations/SKILL.md` | Alembic migration patterns |
+| Writing Queries | `database/writing-queries/SKILL.md` | SQLAlchemy ORM and raw SQL |
+| Optimizing Performance | `database/optimizing-performance/SKILL.md` | Indexes, EXPLAIN, query tuning |
+| Securing Data | `database/securing-data/SKILL.md` | Encryption, RLS, backups |
 
 **Key strengths:** Schema design implementation, query performance, data integrity constraints, migration safety.
-**Technologies:** PostgreSQL, Prisma, SQL, database indexing, migration tooling.
+**Technologies:** PostgreSQL, SQLAlchemy, Alembic, database indexing.
 **Assign when:** Work involves database schema changes, complex queries, or data management.
 
 ---
 
-## Auth
+## Authentication Engineer
 
-**Role:** Handles authentication and authorization — login flows, token management, permissions, and security.
+**Role:** Implements authentication and authorization across the stack.
 
 | Skill | Path | Description |
 |-------|------|-------------|
-| Implementing Auth Flows | `auth/implementing-auth-flows/SKILL.md` | Login, signup, password reset, OAuth |
-| Managing Permissions | `auth/managing-permissions/SKILL.md` | Role-based access, resource-level authorization |
-| Securing Endpoints | `auth/securing-endpoints/SKILL.md` | Token validation, middleware guards, CSRF protection |
+| Implementing Local Auth | `auth/implementing-local-auth/SKILL.md` | Registration, login, bcrypt |
+| Implementing OAuth | `auth/implementing-oauth/SKILL.md` | GitHub/Google OAuth via Authlib |
+| Managing Sessions & Tokens | `auth/managing-sessions-tokens/SKILL.md` | JWT, refresh tokens, cookies |
+| Securing Auth Routes | `auth/securing-auth-routes/SKILL.md` | CSRF, rate limiting, HTTPS |
 
 **Key strengths:** Security-first thinking, token lifecycle management, permission modeling, vulnerability prevention.
-**Technologies:** JWT, OAuth 2.0, bcrypt, session management, RBAC patterns.
+**Technologies:** JWT, OAuth 2.0, bcrypt, Authlib, session management.
 **Assign when:** Work involves user identity, access control, or anything security-sensitive.
 
 ---
 
-## Designer
+## Security Engineer
 
-**Role:** Defines visual systems — layouts, design tokens, responsive behavior, and interaction patterns.
+**Role:** Ensures the system and agents are secure, compliant, and free of vulnerabilities.
 
 | Skill | Path | Description |
 |-------|------|-------------|
-| Creating Layouts | `designer/creating-layouts/SKILL.md` | Page structure, grid systems, responsive breakpoints |
-| Defining Design Tokens | `designer/defining-design-tokens/SKILL.md` | Colors, spacing, typography, shadows |
-| Designing Interactions | `designer/designing-interactions/SKILL.md` | Animations, transitions, hover/focus states |
+| Conducting Security Audit | `security/conducting-security-audit/SKILL.md` | OWASP-based security reviews |
+| Auditing Dependencies | `security/auditing-dependencies/SKILL.md` | Dependency vulnerability scanning |
+| Securing Agents | `security/securing-agents/SKILL.md` | Agent permission policies and sandboxing |
 
-**Key strengths:** Visual consistency, responsive design, accessibility compliance, design system thinking.
-**Technologies:** Figma tokens, Tailwind config, CSS custom properties, motion design.
-**Assign when:** Work involves visual appearance, layout decisions, or design system updates.
+**Key strengths:** Threat modeling, vulnerability assessment, compliance, secure coding practices.
+**Technologies:** OWASP guidelines, dependency scanners, security headers, penetration testing.
+**Assign when:** Security review needed, dependencies must be vetted, or agent permissions need defining.
+
+---
+
+## DevOps Engineer
+
+**Role:** Manages infrastructure, CI/CD pipelines, and deployment automation.
+
+| Skill | Path | Description |
+|-------|------|-------------|
+| Configuring CI/CD | `devops/configuring-cicd/SKILL.md` | GitHub Actions, pipelines, automated testing |
+| Provisioning Infrastructure | `devops/provisioning-infrastructure/SKILL.md` | Docker, cloud resources, IaC |
+| Implementing Observability | `devops/implementing-observability/SKILL.md` | Logging, metrics, tracing |
+| Site Reliability (SRE) | `devops/site-reliability/SKILL.md` | Uptime, incident response, SLOs |
+
+**Key strengths:** Automation, infrastructure as code, monitoring, reliability engineering.
+**Technologies:** GitHub Actions, Docker, Terraform, Prometheus, Grafana.
+**Assign when:** Work involves CI/CD, deployment, infrastructure, or observability.
 
 ---
 
@@ -127,9 +201,12 @@ These skills are not owned by a single agent. Any agent can use them as part of 
 | Skill | Path | Description |
 |-------|------|-------------|
 | Task Tracking | `shared/task-tracking/SKILL.md` | Read and update task status in tasks.md |
-| Code Review | `shared/code-review/SKILL.md` | Review conventions, feedback format, approval criteria |
 | Git Workflow | `shared/git-workflow/SKILL.md` | Branching, commits, pull request conventions |
-| Testing | `shared/testing/SKILL.md` | Unit, integration, and end-to-end testing guidance |
+| Environment Config | `shared/environment-config/SKILL.md` | Env vars, secrets, config files |
+| Code Review | `shared/code-review/SKILL.md` | Review conventions, feedback format, approval criteria |
+| Debugging | `shared/debugging/SKILL.md` | Systematic root cause analysis |
+| TDD | `shared/test-driven-development/SKILL.md` | Red-Green-Refactor cycle |
+| Documentation | `shared/documentation/SKILL.md` | Writing READMEs, API docs, ADRs |
 
 ---
 
@@ -137,10 +214,14 @@ These skills are not owned by a single agent. Any agent can use them as part of 
 
 | If the task involves... | Assign to |
 |------------------------|-----------|
-| System design, API contracts, data models | Architect |
-| UI components, pages, client state | Frontend |
-| API endpoints, business logic, middleware | Backend |
-| Database schema, migrations, queries | Storage |
-| Login, permissions, tokens, security | Auth |
-| Layouts, design tokens, visual polish | Designer |
+| Project roadmap, milestones, strategy | Planner |
+| User stories, acceptance criteria, backlog | Product Manager |
+| System design, API contracts, tech specs | Architect |
+| Brand identity, design tokens, visual polish | Designer |
+| UI components, pages, client state | Frontend Engineer |
+| API endpoints, business logic, middleware | Backend Engineer |
+| Database schema, migrations, queries | Database Engineer |
+| Login, permissions, tokens, security | Auth Engineer |
+| Security audits, vulnerability scanning | Security Engineer |
+| CI/CD, infrastructure, deployment | DevOps Engineer |
 | Task breakdown, coordination, reviews | Agent Manager |

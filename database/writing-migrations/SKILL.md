@@ -3,18 +3,18 @@ name: Writing Migrations
 description: Create and manage Alembic database migrations with safe upgrade and downgrade paths.
 ---
 
-# Goal
+## Goal
 
 Generate reliable, reversible Alembic migrations that evolve the database schema incrementally. Every migration must include both an upgrade and a downgrade path, and must be reviewed before being applied.
 
-# When to Use
+## When to Use
 
 - Adding, modifying, or removing database tables or columns
 - Creating or dropping indexes and constraints
 - Changing column types or default values
 - Any schema change that needs to be tracked and reversible
 
-# Instructions
+## Instructions
 
 ## 1. Generate the Migration
 
@@ -140,7 +140,7 @@ def downgrade() -> None:
     op.drop_column("tasks", "priority")
 ```
 
-# Constraints
+## Constraints
 
 ### ✅ Do
 - Test every migration forward (upgrade) and backward (downgrade)
@@ -160,11 +160,11 @@ def downgrade() -> None:
 - Squash migrations without team agreement
 
 
-# Output Format
+## Output Format
 
 Produce an Alembic migration Python file with the standard header (revision, down_revision, description), an `upgrade()` function, and a `downgrade()` function. Include inline comments explaining non-obvious operations.
 
-# Dependencies
+## Dependencies
 
 - [Designing Schemas](../designing-schemas/SKILL.md) — the schema definition that migrations implement
 - [Git Workflow](../../shared/git-workflow/SKILL.md) — commit migration files following the branch and commit conventions

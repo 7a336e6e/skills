@@ -12,7 +12,6 @@ Create a RAG system that achieves >90% retrieval precision, supports iterative r
 ## When to Use
 
 - Building an AI assistant that needs to answer questions from a document corpus
-- Creating a forensic analysis tool that searches logs and configs
 - Implementing a knowledge base with natural language query interface
 - Adding AI-powered search to an existing application
 

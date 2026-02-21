@@ -1,6 +1,6 @@
 # AGENTS.md — AI Agent Skills Orchestration
 
-This file defines the 8 agent roles, their responsibilities, and the skills available to each. Every agent reads this file to understand the team structure and delegation boundaries.
+This file defines the 12 agent roles, their responsibilities, and the skills available to each. Every agent reads this file to understand the team structure and delegation boundaries.
 
 ## How This System Works
 
@@ -188,6 +188,18 @@ This file defines the 8 agent roles, their responsibilities, and the skills avai
 
 ---
 
+## Agent: AI RAG Engineer
+
+**Role**: Designs and implements RAG (Retrieval-Augmented Generation) pipelines with hybrid search, reranking, agentic patterns, and continuous learning.
+
+| Skill | Path |
+|-------|------|
+| Building RAG Pipelines | `ai-rag/building-rag-pipelines/SKILL.md` |
+
+**Owns**: RAG pipeline architecture, document ingestion, chunking strategies, vector storage, hybrid search, reranking, query enhancement, retrieval evaluation.
+
+---
+
 ## Cross-Agent Contracts
 
 | Producer | Consumer | Contract |
@@ -201,4 +213,6 @@ This file defines the 8 agent roles, their responsibilities, and the skills avai
 | Database | Backend | Schema + query layer defines data access |
 | Auth | Backend + Frontend | Auth middleware + token format |
 | Designer | Frontend | Design tokens + component specs |
+| AI RAG Engineer | Backend + Frontend | RAG pipeline APIs + knowledge base interface |
+| Database | AI RAG Engineer | Schema supports vector storage + chunk metadata |
 | Agent Manager | All agents | Task assignments in tasks.md |

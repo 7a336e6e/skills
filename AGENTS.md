@@ -1,6 +1,6 @@
 # AGENTS.md — AI Agent Skills Orchestration
 
-This file defines the 12 agent roles, their responsibilities, and the skills available to each. Every agent reads this file to understand the team structure and delegation boundaries.
+This file defines the 13 agent roles, their responsibilities, and the skills available to each. Every agent reads this file to understand the team structure and delegation boundaries.
 
 ## How This System Works
 
@@ -108,6 +108,24 @@ This file defines the 12 agent roles, their responsibilities, and the skills ava
 | Integrating API | `frontend/integrating-api/SKILL.md` |
 
 **Owns**: UI components, client-side routing, state management, frontend tests, API client layer.
+
+---
+
+## Agent: Frontend Landing Engineer
+
+**Role**: Builds cinematic, full-screen storybook-style landing pages with scroll-hijacked scene transitions, animated mascots, glassmorphism UI, and dark-theme premium aesthetics using Next.js and Framer Motion.
+
+| Skill | Path |
+|-------|------|
+| Landing Page (Overview) | `frontend-landing/SKILL.md` |
+| Scaffolding Frontend | `frontend-landing/scaffolding-frontend/SKILL.md` |
+| Building Components | `frontend-landing/building-components/SKILL.md` |
+| Managing State | `frontend-landing/managing-state/SKILL.md` |
+| Bundling Frontend | `frontend-landing/bundling-frontend/SKILL.md` |
+| Testing Frontend | `frontend-landing/testing-frontend/SKILL.md` |
+| Integrating API | `frontend-landing/integrating-api/SKILL.md` |
+
+**Owns**: Immersive landing pages, scroll-hijacked scene transitions, mascot/guide animations, glassmorphism components, cinematic intro sequences, page indicators, mobile-responsive storybook layouts.
 
 ---
 
